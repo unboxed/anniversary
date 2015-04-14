@@ -12,6 +12,15 @@ $color-ubxd-purple: #951B81;
 @import "bower_components/retina.js/src/_retina.scss";
 // endbower
 
+
+@mixin linear-gradient($color-top, $color-bottom) {
+  background: -webkit-linear-gradient($color-top, $color-bottom);
+  background: -moz-linear-gradient($color-top, $color-bottom);
+  background: -ms-linear-gradient($color-top, $color-bottom);
+  background: -o-linear-gradient($color-top, $color-bottom);
+  background: linear-gradient($color-top, $color-bottom);
+}
+
 /* ------------ General ------------- */
 html, body {
     width:100%;
@@ -59,10 +68,6 @@ p {
 
 
 /* ------------ Slide 1 ------------- */
-#slide1 {
-  background: url('../images/slide1bg.png') no-repeat center center fixed;
-}
-
 
 .trends-title {
   display: block;
@@ -183,7 +188,6 @@ p {
 
 /* ------------ Slide 5 ------------- */
 #slide5 {
-  background: url('../images/slide5bg.jpg') no-repeat center center fixed;
   color: #FFF;
   overflow: hidden;
 }
@@ -197,7 +201,7 @@ p {
 
 /* ------------ Slide 6 ------------- */
 #slide6 {
-  background: url('../images/bg.svg') no-repeat center center fixed;
+  @include linear-gradient(#FFF, #E9E5DD);
   color: #FFF;
   overflow: hidden;
 }
@@ -227,19 +231,11 @@ p {
 }
 
 .apps-messages:nth-child(2) {
-  background: -webkit-linear-gradient(#50C3FF, #34B5FF);
-  background: -moz-linear-gradient(#50C3FF, #34B5FF);
-  background: -ms-linear-gradient(#50C3FF, #34B5FF);
-  background: -o-linear-gradient(#50C3FF, #34B5FF);
-  background: linear-gradient(#50C3FF, #34B5FF);
+  @include linear-gradient(#50C3FF, #34B5FF);
 }
 
 .apps-messages:nth-child(4) {
-  background: -webkit-linear-gradient(#028BFF, #0087FF);
-  background: -moz-linear-gradient(#028BFF, #0087FF);
-  background: -ms-linear-gradient(#028BFF, #0087FF);
-  background: -o-linear-gradient(#028BFF, #0087FF);
-  background: linear-gradient(#028BFF, #0087FF);
+  @include linear-gradient(#028BFF, #0087FF);
 }
 
 
@@ -300,20 +296,17 @@ p {
 
 /* ------------ Slide 10 ------------- */
 #slide10 {
-  background: url('../images/slide10bg.jpg') no-repeat center center fixed;
   color: #FFF;
 }
 
 
 /* ------------ Slide 11 ------------- */
 #slide11 {
-  background: url('../images/slide11bg.jpg') no-repeat center center fixed;
   color: #FFF;
 }
 
 
-/* ------------ FFF------------- */
-
+/* ------------ RESPONSIVE STYLES FOR DESKTOP ------------- */
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) { 
@@ -327,6 +320,11 @@ p {
   }
 
 /* ------------ Slide 1 ------------- */
+
+  #slide1 {
+    background: url('../images/slide1bg.png') no-repeat center center fixed;
+  }
+
   .trends-circle {
     width: 500px;
     height: 500px;
@@ -380,7 +378,13 @@ p {
      top: -200px;
      right: -300px;
   }
-  /* Slide 6 */
+
+/* ------------ Slide 5 ------------- */
+#slide5 {
+  background: url('../images/slide5bg.jpg') no-repeat center center fixed;
+}
+
+/* ------------ Slide 6 ------------- */
   #map-canvas {
     height: 100%; 
     width: 100%; 
@@ -390,8 +394,7 @@ p {
     z-index: 1; 
   }
 
-  /* Slide 9 */
-
+/* ------------ Slide 9 ------------- */
   #slide9 {
     background: #FFF;
   }
@@ -422,6 +425,17 @@ p {
 
   .government-content-right {
     color: $color-ubxd-purple;
+  }
+
+  /* ------------ Slide 10 ------------- */
+  #slide10 {
+    background: url('../images/slide10bg.jpg') no-repeat center center fixed;
+  }
+
+
+  /* ------------ Slide 11 ------------- */
+  #slide11 {
+    background: url('../images/slide11bg.jpg') no-repeat center center fixed;
   }
 }
 
