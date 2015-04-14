@@ -254,6 +254,11 @@ p {
   z-index: 10;
 }
 
+.humans {
+ position: relative;
+ z-index: 100;
+}
+
 .humans h2 {
   text-align: center;
   background: rgba(0,0,0,0.7);
@@ -263,6 +268,8 @@ p {
 }
 
 .humans-content p {
+  position: relative;
+  z-index: 100;
   background: rgba(0,0,0,0.7);
   border-radius: 20px;
   padding: 1em;
@@ -377,10 +384,10 @@ p {
   #map-canvas {
     height: 100%; 
     width: 100%; 
-    position:absolute; 
+    position: absolute; 
     top: 0; 
     left: 0; 
-    z-index: 0; 
+    z-index: 1; 
   }
 
   /* Slide 9 */
