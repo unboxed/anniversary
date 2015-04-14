@@ -52,6 +52,18 @@ p {
   margin: 0 0 1em 0;
 }
 
+.padding-1em {
+ padding: 1em;
+} 
+
+.border-radius-20 {
+ border-radius: 20px; 
+} 
+
+.bg-slightly-transparent {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 
 /* ------------ General Slides  ------------- */
 .slide {
@@ -62,6 +74,7 @@ p {
 
 .pagenumber {
   color: #FFF;
+  z-index: 100;
   font-family: $fonts-barlow; 
   font-size: 4em;
 }
@@ -247,7 +260,6 @@ p {
 
 #slide7 .pagenumber {
   color: $color-ubxd-purple;
-  z-index: 10;
 }
 
 .humans {
@@ -274,14 +286,22 @@ p {
 
 /* ------------ Slide 8 ------------- */
 #slide8 {
-  background: $color-ubxd-purple;
   overflow: hidden;
-  color: #FFF;
+  color: #000;
   text-align: center;
+}
+
+#slide8 .pagenumber {
+  color: #000;
 }
 
 .agile-whiteboard {
   width: 70%;
+}
+
+.agile-content {
+  position: relative;
+  z-index: 100;
 }
 
 /* ------------ Slide 9 ------------- */
@@ -297,6 +317,15 @@ p {
 /* ------------ Slide 10 ------------- */
 #slide10 {
   color: #FFF;
+}
+
+.delivery h2, .delivery p {
+  padding: .7em;
+  background: rgba(83, 92, 114, 1.0);
+}
+
+.delivery h2 {
+  margin-top: 25%;
 }
 
 
@@ -394,6 +423,35 @@ p {
     z-index: 1; 
   }
 
+  .agile-left-background {
+    display: block;
+    position: absolute;
+    width: 65%;
+    height: 110%;
+    background: #FFF;
+    left: -10%;
+    top: -10%;
+    z-index: 10;
+  }
+
+  .agile-right-background {
+    display: block;
+    position: absolute;
+    width: 65%;
+    height: 110%;
+    background: url('../images/board.jpg');
+    background-color: #FFF;
+    right: -10%;
+    top: -10%;
+    z-index: 10;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: 50%;
+  }
+
 /* ------------ Slide 9 ------------- */
   #slide9 {
     background: #FFF;
@@ -430,6 +488,21 @@ p {
   /* ------------ Slide 10 ------------- */
   #slide10 {
     background: url('../images/slide10bg.jpg') no-repeat center center fixed;
+    overflow: hidden;
+  }
+
+  .delivery-bg-box {
+    display: block;
+    position: absolute;
+    width: 75%;
+    height: 300%;
+    background: #788097;
+    left: -10%;
+    top: -30%;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: right;
+    transform: rotate(-20deg);
   }
 
 
