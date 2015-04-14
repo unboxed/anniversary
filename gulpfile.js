@@ -56,6 +56,12 @@ gulp.task('images', function () {
     .pipe(gulp.dest('dist/images'));
 });
 
+// imagemin threw errors with minimizing svg images :(
+gulp.task('svgs', function() {
+  return gulp.src('app/images/**/*.svg')
+  .pipe(gulp.dest('dist/images'));
+});
+
 gulp.task('fonts', function () {
   return gulp.src(require('main-bower-files')({
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
@@ -118,7 +124,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', ['jshint', 'html', 'images', 'svgs', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
