@@ -10,3 +10,8 @@ Get the project up and running:
 - run ```gulp serve``` and start developing
 
 To make a distribution, run ```gulp``` 
+
+
+## Deploying ##
+
+- run ```bundle install```
