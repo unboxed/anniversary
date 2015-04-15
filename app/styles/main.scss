@@ -153,6 +153,7 @@ p {
 }
 
 .fast-growth-rocket {
+  display: none;
   position:absolute;
   width: 300px;
   right: 15%;
@@ -203,6 +204,7 @@ p {
 #slide5 {
   color: #FFF;
   overflow: hidden;
+  background: #000;
 }
 
 
@@ -225,6 +227,11 @@ p {
 .apps {
   padding-top: 15%;
 }
+
+.apps-apps-everywhere {
+  margin: 1em 0 3em 0;
+}
+
 .apps-messages{
   border-radius: 10px;
   background: #E6E6E6;
@@ -333,6 +340,7 @@ p {
 #slide9 {
   background: $color-ubxd-purple;
   overflow: hidden;
+  color: #FFF;
 }
 
 .government-background {
@@ -342,6 +350,7 @@ p {
 /* ------------ Slide 10 ------------- */
 #slide10 {
   color: #FFF;
+  background: #000;
 }
 
 .delivery h2, .delivery p {
@@ -357,6 +366,7 @@ p {
 /* ------------ Slide 11 ------------- */
 #slide11 {
   color: #FFF;
+  background: #000;
 }
 
 .space-content-box {
