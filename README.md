@@ -15,3 +15,4 @@ To make a distribution, run ```gulp```
 ## Deploying ##
 
 - run ```bundle install```
+- run ```cap production deploy```
