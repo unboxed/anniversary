@@ -228,6 +228,44 @@ p {
   padding-top: 15%;
 }
 
+.apps-jiggly {
+ max-width: 500px;
+}
+
+.apps-icon {
+  height: 85px;
+  width: 85px;
+  display: inline-block;
+  text-align: center;
+  line-height: 85px;
+  border-radius: 15px;
+  font-size: 70px;
+  font-family: $fonts-barlow; 
+  margin: 0 7px 25px 0;
+}
+
+.apps-icon-jiggly {
+  @include linear-gradient(#50C3FF, #028BFF);
+  animation-name: jiggly;
+  animation-iteration-count: infinite;
+  animation-duration: 0.25s
+}
+
+.apps-icon-empty {
+ background: #D4D4D4;
+}
+
+@keyframes jiggly {
+  0% {
+    transform: rotate(-1deg);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: rotate(1.5deg);
+    animation-timing-function: ease-out;
+  }
+}
+
 .apps-apps-everywhere {
   margin: 1em 0 3em 0;
 }
