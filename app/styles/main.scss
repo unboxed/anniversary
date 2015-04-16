@@ -414,11 +414,6 @@ p {
   background: #000;
 }
 
-.space-content-box {
-  margin: 1em;
-  padding: 1em;
-  background: rgba(0, 0, 0, 0.7);
-}
 
 /* ------------ Slide 12 ------------- */
 #slide12 {
@@ -520,6 +515,8 @@ p {
     z-index: 1; 
   }
 
+/* ------------ Slide 8 ------------- */
+
   .agile-left-background {
     display: block;
     position: absolute;
@@ -541,12 +538,9 @@ p {
     right: -10%;
     top: -10%;
     z-index: 10;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 200%;
     background-repeat: no-repeat;
     background-position-x: 0px;
-    background-position-y: 50%;
   }
 
 /* ------------ Slide 9 ------------- */
@@ -564,7 +558,7 @@ p {
     top: -10%;
     background-image: url('../images/pixels.svg');
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: 150px 100%;
     background-position: right;
   }
 
@@ -610,5 +604,12 @@ p {
   #slide11 {
     background: url('../images/slide11bg.jpg') no-repeat center center fixed;
   }
+
+  .space-content-box {
+    margin: 1em;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
 }
 
