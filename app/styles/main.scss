@@ -23,9 +23,9 @@ $color-ubxd-purple: #951B81;
 
 /* ------------ General ------------- */
 html, body {
-    width:100%;
-    height:100%;
-    font-family: $fonts-basic;
+  width:100%;
+  height:100%;
+  font-family: $fonts-basic;
 }
 
 h2 {
@@ -229,7 +229,8 @@ p {
 }
 
 .apps-jiggly {
- max-width: 500px;
+  max-width: 500px;
+  position: relative; z-index: 10;
 }
 
 .apps-icon {
@@ -411,6 +412,15 @@ p {
   margin: 1em;
   padding: 1em;
   background: rgba(0, 0, 0, 0.7);
+}
+
+/* ------------ Slide 12 ------------- */
+#slide12 {
+  color: #000;
+}
+
+#slide12 .pagenumber {
+  color: $color-ubxd-purple;
 }
 
 
