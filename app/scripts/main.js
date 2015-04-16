@@ -77,7 +77,7 @@ function initializeGoogleMaps(){
     navigationControl: false,
     mapTypeControl: false,
     scaleControl: false,
-    draggable: true,
+    draggable: false,
     disableDefaultUI: true 
   };
   var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);

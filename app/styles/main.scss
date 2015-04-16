@@ -188,6 +188,7 @@ p {
 
 .innovate-content {
   color: $color-ubxd-purple;
+  margin-top: 2em;
 }
 
 .tesla-portrait-surrounding-circle {
@@ -432,7 +433,7 @@ p {
 /* ------------ RESPONSIVE STYLES FOR DESKTOP ------------- */
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: $screen-md-min) { 
+@media (min-width: $screen-sm-min) { 
 
 /* ------------ General Slides  ------------- */
   .pagenumber {
@@ -592,6 +593,7 @@ p {
   #slide10 {
     background: url('../images/slide10bg.jpg') no-repeat center center fixed;
     overflow: hidden;
+    background-color: #ccc;
   }
 
   .delivery-bg-box {
@@ -623,6 +625,13 @@ p {
     background: rgba(0, 0, 0, 0.7);
   }
 
+}
+
+/*** iPad ***/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+  .slide {
+    background-attachment: scroll!important;
+  }
 }
 
 /*** Animations ***/
