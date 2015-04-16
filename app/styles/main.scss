@@ -558,8 +558,12 @@ p {
     top: -10%;
     background-image: url('../images/pixels.svg');
     background-repeat: no-repeat;
-    background-size: 150px 100%;
+    background-size: 150px 3000px;
     background-position: right;
+  }
+
+  .ie9 .government-background {
+    background-image: none;
   }
 
   .government-content-left {
