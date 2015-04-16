@@ -4,10 +4,10 @@
 
 function centerFrontpageCircle(){
   'use strict';
-  $('.circle').css({
+  $('.trends-circle').css({
     position:'absolute',
-    left: ($(window).width() - $('.circle').outerWidth())/2,
-    top: ($(window).height() - $('.circle').outerHeight())/2
+    left: ($(window).width() - $('.trends-circle').outerWidth())/2,
+    top: ($(window).height() - $('.trends-circle').outerHeight())/2
   });
 }
 
