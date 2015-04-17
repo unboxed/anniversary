@@ -3,7 +3,7 @@ $icon-font-path: '../fonts/';
 $fonts-basic: ApexSansMediumTRegular, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $fonts-barlow: Barlow, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$color-ubxd-purple: #951B81;
+$color-ubxd-purple: #812A80;
 
 @import 'fonts';
 
@@ -423,11 +423,21 @@ p {
 
 /* ------------ Slide 12 ------------- */
 #slide12 {
-  color: #000;
+  padding: 5%;
+  color: $color-ubxd-purple;
 }
 
 #slide12 .pagenumber {
   color: $color-ubxd-purple;
+}
+
+.unboxed-logo-container {
+  border-bottom: 1px solid;
+  padding-bottom: 20px;
+}
+
+.unboxed-header {
+ font-size: 5em;
 }
 
 
@@ -435,7 +445,6 @@ p {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) {
-
 /* ------------ General Slides  ------------- */
   .pagenumber {
     position: absolute;
