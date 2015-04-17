@@ -244,13 +244,13 @@ p {
 }
 
 .apps-icon {
-  height: 85px;
-  width: 85px;
+  height: 75px;
+  width: 75px;
   display: inline-block;
   text-align: center;
-  line-height: 85px;
+  line-height: 75px;
   border-radius: 15px;
-  font-size: 70px;
+  font-size: 65px;
   font-family: $fonts-barlow; 
   margin: 0 7px 25px 0;
 }
@@ -446,7 +446,8 @@ p {
 /* ------------ Slide 1 ------------- */
 
   #slide1 {
-    background: url('../images/slide1bg.png') no-repeat center center fixed;
+    @include at2x('../images/slide1bg', 'png');
+    background-attachment: fixed;
   }
 
   .trends-circle {
@@ -511,7 +512,8 @@ p {
 
 /* ------------ Slide 5 ------------- */
 #slide5 {
-  background: url('../images/slide5bg.jpg') no-repeat center center fixed;
+  @include at2x('../images/slide5bg');
+  background-attachment: fixed;
 }
 
 /* ------------ Slide 6 ------------- */
@@ -591,7 +593,8 @@ p {
 
   /* ------------ Slide 10 ------------- */
   #slide10 {
-    background: url('../images/slide10bg.jpg') no-repeat center center fixed;
+    @include at2x('../images/slide10bg');
+    background-attachment: fixed;
     overflow: hidden;
     background-color: #ccc;
   }
@@ -616,7 +619,8 @@ p {
 
   /* ------------ Slide 11 ------------- */
   #slide11 {
-    background: url('../images/slide11bg.jpg') no-repeat center center fixed;
+    @include at2x('../images/slide11bg');
+    background-attachment: fixed;
   }
 
   .space-content-box {
