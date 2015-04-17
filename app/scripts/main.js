@@ -52,7 +52,7 @@ function alignTeslaImages(){
 
 function initSkrollr(){
   'use strict';
-  if((/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+  if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
     return;
   }
   skrollr.init({
