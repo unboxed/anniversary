@@ -99,7 +99,7 @@ $( document ).ready(function() {
   'use strict';
   formatFrontpage(); 
   $('[data-toggle="tooltip"]').tooltip();
-  $(".unboxed-header").fitText();
+  $('.unboxed-header').fitText();
   initSkrollr();
 });
 
