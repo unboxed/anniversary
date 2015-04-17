@@ -50,17 +50,33 @@ function alignTeslaImages(){
   
 }
 
+function resetTeslaImages() {
+ 'use strict';
+  var images = $('img.innovate-tesla-innovation');
+
+  $.each(images, function(i, img) {
+    $(img).attr('style', '');
+  });
+}
+
+function browserIsMobile(){
+  'use strict';
+   return (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
+}
+
+function screensizeMediumOrBigger(){
+  'use strict';
+   return $('.innovate-tesla').css('position') === 'absolute';
+}
+
 function initSkrollr(){
   'use strict';
-  if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-    return;
-  }
+
   skrollr.init({
     render: function() {
       var teslaSlideOnScreen = $('#slide4').hasClass('skrollable-after'); 
       var teslaImagesAligned = $('#slide4').hasClass('tesla-images-aligned'); 
-      var screenSizeMediumOrBigger = $('.innovate-tesla').css('position') === 'absolute';
-      if (teslaSlideOnScreen && screenSizeMediumOrBigger && !teslaImagesAligned) {
+      if (teslaSlideOnScreen && screensizeMediumOrBigger() && !teslaImagesAligned) {
         alignTeslaImages();
         $('#slide4').addClass('tesla-images-aligned'); 
       }
@@ -93,6 +109,11 @@ $(window).resize(function(){
   'use strict';
   $('.slide').css('min-height', $(window).height());
   centerFrontpageCircle();
+  if (screensizeMediumOrBigger()) {
+   alignTeslaImages();
+  } else {
+   resetTeslaImages();
+  }
 });
 
 $( document ).ready(function() {
@@ -100,7 +121,15 @@ $( document ).ready(function() {
   formatFrontpage(); 
   $('[data-toggle="tooltip"]').tooltip();
   $('.unboxed-header').fitText();
-  initSkrollr();
+
+  if(!browserIsMobile()){
+    initSkrollr();
+  }
+
+  if (browserIsMobile() && screensizeMediumOrBigger()) {
+   alignTeslaImages();
+  }
+
 });
 
 google.maps.event.addDomListener(window, 'load', initializeGoogleMaps);
