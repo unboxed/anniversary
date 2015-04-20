@@ -95,15 +95,10 @@ p {
 .trends-title {
   display: block;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 85px;
   text-transform: uppercase;
   line-height: 60px;
   font-size: 40px;
-}
-
-.trends-ten {
-  font-family: $fonts-barlow;
-  font-size: 1.6em;
 }
 
 /* ------------ Slide 2 ------------- */
@@ -468,6 +463,14 @@ p {
     border-radius: 500px;
     margin: 0 auto;
     border: 10px solid #E6E6E6;
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 60px;
+      top: 20px;
+      left: 155px;
+    }
   }
   
 /* ------------ Slide 2 ------------- */

@@ -13,7 +13,7 @@ function centerFrontpageCircle(){
 
 function formatFrontpage(){
   'use strict';
-  $('.trends-title').fitText(1.1);
+  $('.trends-title').fitText(1.2);
   $('.slide').css('min-height', $(window).height());
   centerFrontpageCircle();
 }
