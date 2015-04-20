@@ -2,6 +2,11 @@
 /* global google */
 /* global skrollr */
 
+function screensizeMediumOrBigger(){
+  'use strict';
+   return $('.innovate-tesla').css('position') === 'absolute';
+}
+
 function centerFrontpageCircle(){
   'use strict';
   if (!screensizeMediumOrBigger()){
@@ -59,11 +64,6 @@ function resetTeslaImages() {
 function browserIsMobile(){
   'use strict';
    return (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
-}
-
-function screensizeMediumOrBigger(){
-  'use strict';
-   return $('.innovate-tesla').css('position') === 'absolute';
 }
 
 function initSkrollr(){
