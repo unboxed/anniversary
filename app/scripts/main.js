@@ -118,6 +118,7 @@ $(window).resize(function(){
 
 $( document ).ready(function() {
   'use strict';
+  google.maps.event.addDomListener(window, 'load', initializeGoogleMaps);
   formatFrontpage(); 
   $('[data-toggle="tooltip"]').tooltip();
   $('.unboxed-header').fitText();
@@ -131,6 +132,3 @@ $( document ).ready(function() {
   }
 
 });
-
-google.maps.event.addDomListener(window, 'load', initializeGoogleMaps);
-
