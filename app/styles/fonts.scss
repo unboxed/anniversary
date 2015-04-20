@@ -1,20 +1,14 @@
 @font-face {
-  font-family: 'ApexSansMediumTRegular';
-  src: url("../fonts/apexsansmediumt-webfont.eot");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ApexSansMediumTRegular';
-  src: url("../fonts/apexsansmediumt-webfont.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/apexsansmediumt-webfont.woff") format("woff"),
-       url("../fonts/apexsansmediumt-webfont.svg#ApexSansMediumTRegular") format("svg");
-}
-
-@font-face {
   font-family: 'Barlow';
   src: url("../fonts/barlow_by_thunderpanda_ver01-webfont.woff") format("woff"),
        url("../fonts/barlow_by_thunderpanda_ver01-webfont.ttf") format("truetype"),
        url("../fonts/barlow_by_thunderpanda_ver01-webfont.svg#WebFontRegular") format("svg");
 }
+
+@font-face {
+  font-family: 'ApexSans-Book';
+  src: url("../fonts/ApexSans-Book.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/ApexSans-Book.woff") format("woff"),
+       url("../fonts/ApexSans-Book.svg#ApexSans-Book") format("svg");
+}
+
