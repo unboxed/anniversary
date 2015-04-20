@@ -4,18 +4,15 @@
 
 function centerFrontpageCircle(){
   'use strict';
+  if (!screensizeMediumOrBigger()){
+    return;
+  }
   $('.trends-circle').css({
     position:'absolute',
     left: ($(window).width() - $('.trends-circle').outerWidth())/2,
     top: ($(window).height() - $('.trends-circle').outerHeight())/2
   });
-}
-
-function formatFrontpage(){
-  'use strict';
-  $('.trends-title').fitText(1.2);
-  $('.slide').css('min-height', $(window).height());
-  centerFrontpageCircle();
+  $('.trends-title').fitText(1.3);
 }
 
 function toRadians (angle) {
@@ -118,10 +115,13 @@ $(window).resize(function(){
 
 $( document ).ready(function() {
   'use strict';
-  google.maps.event.addDomListener(window, 'load', initializeGoogleMaps);
-  formatFrontpage(); 
+
+  $('.slide').css('min-height', $(window).height());
   $('[data-toggle="tooltip"]').tooltip();
+
   $('.unboxed-header').fitText();
+
+  centerFrontpageCircle();
 
   if(!browserIsMobile()){
     initSkrollr();
@@ -131,4 +131,5 @@ $( document ).ready(function() {
    alignTeslaImages();
   }
 
+  google.maps.event.addDomListener(window, 'load', initializeGoogleMaps);
 });

@@ -34,7 +34,7 @@ html, body {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   text-transform: uppercase;
   padding-bottom: 1em;
 }
@@ -94,11 +94,14 @@ p {
 
 .trends-title {
   display: block;
+  padding-top: 1em;
   text-align: center;
-  padding-top: 85px;
-  text-transform: uppercase;
   line-height: 60px;
   font-size: 40px;
+}
+
+.trends-circle {
+  text-align: center;
 }
 
 /* ------------ Slide 2 ------------- */
@@ -231,12 +234,22 @@ p {
 #slide6 .pagenumber {
   color: $color-ubxd-purple;
 }
+
+#map-canvas {
+  height: 100%; 
+  width: 100%; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 1; 
+}
+
 .apps {
   padding-top: 15%;
 }
 
 .apps-jiggly {
-  max-width: 500px;
+  max-width: 375px;
   position: relative; z-index: 10;
 }
 
@@ -253,7 +266,7 @@ p {
 }
 
 .apps-icon-jiggly {
-  @include linear-gradient(#50C3FF, #028BFF);
+  @include linear-gradient(#680568, #822582);
   animation-name: jiggly;
   animation-iteration-count: infinite;
   animation-duration: 0.25s
@@ -297,11 +310,11 @@ p {
 }
 
 .apps-messages:nth-child(2) {
-  @include linear-gradient(#50C3FF, #34B5FF);
+  @include linear-gradient(#812A80, #792178);
 }
 
 .apps-messages:nth-child(4) {
-  @include linear-gradient(#028BFF, #0087FF);
+  @include linear-gradient(#6D156D, #670E67);
 }
 
 
@@ -322,7 +335,7 @@ p {
 
 .humans h2 {
   text-align: center;
-  background: rgba(0,0,0,0.7);
+ background: rgba(130, 37, 130, 0.8);
   border-radius: 20px;
   overflow: hidden;
   padding: 1em;
@@ -331,10 +344,15 @@ p {
 .humans-content p {
   position: relative;
   z-index: 100;
-  background: rgba(0,0,0,0.7);
+ background: rgba(130, 37, 130, 0.8);
   border-radius: 20px;
   padding: 1em;
   overflow: hidden;
+}
+
+.humans-content p.quote {
+ background: rgba(130, 37, 130, 0.8);
+ font-style: italic;
 }
 
 /* ------------ Slide 8 ------------- */
@@ -436,6 +454,11 @@ p {
  font-size: 5em;
 }
 
+.unboxed-predictions {
+  margin-top: 2em;
+  text-align: center;
+}
+
 
 /* ------------ RESPONSIVE STYLES FOR DESKTOP ------------- */
 
@@ -456,11 +479,15 @@ p {
     background-attachment: fixed;
   }
 
+  .trends-title {
+    padding-top: 110px;
+  }
+
   .trends-circle {
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     background: #FFF;
-    border-radius: 500px;
+    border-radius: 550px;
     margin: 0 auto;
     border: 10px solid #E6E6E6;
     position: relative;
@@ -468,8 +495,8 @@ p {
     img {
       position: absolute;
       height: 60px;
-      top: 20px;
-      left: 155px;
+      top: 35px;
+      left: 185px;
     }
   }
   
@@ -490,7 +517,7 @@ p {
     display: block;
     height: 150px;
     position: relative;
-    bottom: -7px;
+    bottom: -50px;
   }
  
   .fast-growth-rocket {
@@ -532,14 +559,6 @@ p {
 }
 
 /* ------------ Slide 6 ------------- */
-  #map-canvas {
-    height: 100%; 
-    width: 100%; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    z-index: 1; 
-  }
 
 /* ------------ Slide 8 ------------- */
 
@@ -642,6 +661,12 @@ p {
     margin: 1em;
     padding: 1em;
     background: rgba(0, 0, 0, 0.7);
+  }
+
+  /* ------------ Slide 12 ------------- */
+  .unboxed-predictions {
+    margin-top: 0em;
+    text-align: left;
   }
 
 }
