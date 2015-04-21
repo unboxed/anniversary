@@ -372,25 +372,19 @@ p {
   z-index: 100;
   text-align: left;
 
-
   h3 {
-    padding: 0.7em;
     color: #454F54;
-    border: 2px solid #FB6879;
-    font-size: 1.5em;
   }
 
   ul {
    list-style: none;
-   padding: 0;
+   padding: 1em 0 0 1.5em;
+   list-style-image: url('../images/bullet.svg');
 
    li {
-    background: rgba(0,0,0, 0.5);
-    margin: 0 0 1em 0;
-    padding: 0.7em;
-    color: #FFF;
+    padding: 0.7em 0 0.7em 0em;
+    color: #000;
     font-size: 1.2em;
-    border: 2px solid;
    }
 
   }
