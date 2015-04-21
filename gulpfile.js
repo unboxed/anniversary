@@ -49,14 +49,6 @@ gulp.task('html', ['styles'], function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task("revreplace", ["revision"], function(){
-  var manifest = gulp.src("./" + opt.distFolder + "/rev-manifest.json");
-
-  return gulp.src(opt.distFolder + "/index.html")
-    .pipe(revReplace({manifest: manifest}))
-    .pipe(gulp.dest(opt.distFolder));
-});
-
 gulp.task('images', function () {
   return gulp.src(['app/images/**/*.jpg', 'app/images/**/*.png'])
     .pipe($.cache($.imagemin({
