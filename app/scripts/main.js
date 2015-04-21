@@ -9,15 +9,11 @@ function screensizeMediumOrBigger(){
 
 function centerFrontpageCircle(){
   'use strict';
-  if (!screensizeMediumOrBigger()){
-    return;
-  }
   $('.trends-circle').css({
     position:'absolute',
     left: ($(window).width() - $('.trends-circle').outerWidth())/2,
     top: ($(window).height() - $('.trends-circle').outerHeight())/2
   });
-  $('.trends-title').fitText(1.3);
 }
 
 function toRadians (angle) {

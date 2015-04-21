@@ -91,16 +91,35 @@ p {
 
 /* ------------ Slide 1 ------------- */
 
+#slide1 {
+  @include at2x('../images/slide1bg', 'png');
+  background-attachment: scroll;
+}
+
 .trends-title {
   display: block;
-  padding-top: 1em;
+  padding-top: 55px;
   text-align: center;
-  line-height: 60px;
-  font-size: 40px;
+  line-height: 45px;
+  font-size: 35px;
 }
 
 .trends-circle {
+  width: 400px;
+  height: 400px;
+  background: #FFF;
+  border-radius: 400px;
+  margin: 0 auto;
+  border: 10px solid #E6E6E6;
+  position: relative;
   text-align: center;
+
+  img {
+    position: absolute;
+    height: 30px;
+    top: 15px;
+    left: 145px;
+  }
 }
 
 /* ------------ Slide 2 ------------- */
@@ -474,6 +493,8 @@ p {
 
   .trends-title {
     padding-top: 110px;
+    line-height: 60px;
+    font-size: 45px;
   }
 
   .trends-circle {
@@ -486,6 +507,7 @@ p {
     position: relative;
 
     img {
+      display: block;
       position: absolute;
       height: 60px;
       top: 35px;
@@ -629,7 +651,7 @@ p {
   .delivery h2 {
     margin-top: 25%;
   }
-  
+
   .delivery-bg-box {
     display: block;
     position: absolute;
