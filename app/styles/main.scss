@@ -40,7 +40,6 @@ h2 {
 }
 
 p {
-  padding-bottom: 1.5em;
   font-size: 1.3em;
 }
 
@@ -150,9 +149,6 @@ p {
 
 .fast-growth {
   border-bottom: 1px solid;
-}
-.fast-growth-title {
-  line-height: 1.7em;
 }
 
 .fast-growth-building {
@@ -517,7 +513,7 @@ p {
     display: block;
     height: 150px;
     position: relative;
-    bottom: -50px;
+    bottom: -2px;
   }
  
   .fast-growth-rocket {
