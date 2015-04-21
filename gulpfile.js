@@ -4,6 +4,8 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
+var rev = require('gulp-rev');
+
 var reload = browserSync.reload;
 
 gulp.task('styles', function () {
@@ -38,10 +40,21 @@ gulp.task('html', ['styles'], function () {
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.csso()))
+    .pipe($.if('*.js', $.rev()))
+    .pipe($.if('*.css', $.rev()))
     .pipe(assets.restore())
     .pipe($.useref())
+    .pipe($.revReplace())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task("revreplace", ["revision"], function(){
+  var manifest = gulp.src("./" + opt.distFolder + "/rev-manifest.json");
+
+  return gulp.src(opt.distFolder + "/index.html")
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest(opt.distFolder));
 });
 
 gulp.task('images', function () {
