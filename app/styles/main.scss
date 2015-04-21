@@ -405,7 +405,11 @@ p {
 /* ------------ Slide 10 ------------- */
 #slide10 {
   color: #FFF;
-  background: #000;
+  background: #788097;
+}
+
+.delivery-bg-box {
+  display: none;
 }
 
 .delivery h2, .delivery p {
@@ -414,9 +418,8 @@ p {
 }
 
 .delivery h2 {
-  margin-top: 25%;
+  margin-top: 1em;
 }
-
 
 /* ------------ Slide 11 ------------- */
 #slide11 {
@@ -623,6 +626,10 @@ p {
     background-color: #ccc;
   }
 
+  .delivery h2 {
+    margin-top: 25%;
+  }
+  
   .delivery-bg-box {
     display: block;
     position: absolute;
