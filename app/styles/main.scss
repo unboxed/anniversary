@@ -79,6 +79,7 @@ p {
   background-position: center;
   position: relative;
   padding: 10%;
+  overflow: hidden;
 }
 
 .pagenumber {
@@ -117,6 +118,7 @@ p {
   img {
     position: absolute;
     height: 30px;
+    width: 90px;
     top: 15px;
     left: 145px;
   }
@@ -510,6 +512,7 @@ p {
       display: block;
       position: absolute;
       height: 60px;
+      width: 180px;
       top: 35px;
       left: 185px;
     }
@@ -694,6 +697,11 @@ p {
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
   .slide {
     background-attachment: scroll!important;
+    padding-top: 13%;
+  }
+
+  .fast-growth-rocket {
+    display: none;
   }
 }
 
