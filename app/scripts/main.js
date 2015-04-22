@@ -79,6 +79,119 @@ function initSkrollr(){
 
 function initializeGoogleMaps(){
   'use strict';
+
+  var styles =
+    [
+        {
+            'featureType': 'administrative',
+            'elementType': 'labels.text.fill',
+            'stylers': [
+                {
+                    'color': '#444444'
+                }
+            ]
+        },
+        {
+            'featureType': 'landscape',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'color': '#f2f2f2'
+                }
+            ]
+        },
+        {
+            'featureType': 'poi',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'visibility': 'off'
+                }
+            ]
+        },
+        {
+            'featureType': 'road',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'saturation': -100
+                },
+                {
+                    'lightness': 45
+                }
+            ]
+        },
+        {
+            'featureType': 'road.highway',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'visibility': 'simplified'
+                }
+            ]
+        },
+        {
+            'featureType': 'road.arterial',
+            'elementType': 'labels.icon',
+            'stylers': [
+                {
+                    'visibility': 'off'
+                }
+            ]
+        },
+        {
+            'featureType': 'transit',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'visibility': 'off'
+                }
+            ]
+        },
+        {
+            'featureType': 'transit.station.bus',
+            'elementType': 'labels.icon',
+            'stylers': [
+                {
+                    'saturation': '-16'
+                }
+            ]
+        },
+        {
+            'featureType': 'water',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'color': '#04b7ff'
+                },
+                {
+                    'visibility': 'on'
+                }
+            ]
+        },
+        {
+            'featureType': 'water',
+            'elementType': 'geometry.fill',
+            'stylers': [
+                {
+                    'color': '#822582'
+                }
+            ]
+        },
+        {
+            'featureType': 'water',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#ffffff'
+                },
+                {
+                    'weight': '0.01'
+                }
+            ]
+        }
+    ];
+
   var mapOptions = { 
     center: { lat: 51.5211246, lng: -0.0778594 },
     zoom: 12,
@@ -87,7 +200,8 @@ function initializeGoogleMaps(){
     mapTypeControl: false,
     scaleControl: false,
     draggable: false,
-    disableDefaultUI: true 
+    disableDefaultUI: true,
+    styles: styles 
   };
   var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
   if (navigator.geolocation) {
