@@ -469,11 +469,12 @@ p {
 
 .unboxed-logo-container {
   border-bottom: 1px solid;
-  padding-bottom: 20px;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .unboxed-header {
- font-size: 5em;
+ padding: 1em 0;
 }
 
 .unboxed-predictions {
