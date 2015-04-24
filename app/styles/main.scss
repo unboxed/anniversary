@@ -126,6 +126,9 @@ p {
     left: 145px;
   }
 }
+.scroll-arrow {
+ display: none;
+}
 
 /* ------------ Slide 2 ------------- */
 
@@ -149,6 +152,7 @@ p {
 
 .iot-dogs {
  width: 90%;
+ margin-top: 2em;
 }
 
 .iot-description { 
@@ -346,6 +350,7 @@ p {
 
 #slide7 .pagenumber {
   color: $color-ubxd-purple;
+  z-index: 100;
 }
 
 .humans {
@@ -476,17 +481,24 @@ p {
   text-align: center;
 }
 
-.ubxd-website {
+.ubxd-contact {
   padding: 1em;
   background: purple;
   color: #FFF;
   text-decoration: none;
-  margin-top: 2em;
   display: inline-block;
 }
 
-.ubxd-website:hover {
+.ubxd-contact:hover {
   color: #FFF;
+}
+
+.ubxd-action {
+ margin: 0.5em 0 0.5em 0;
+ font-weight: bold;
+}
+.addthis_sharing_toolbox {
+  margin-bottom: 1em;
 }
 
 
@@ -536,17 +548,25 @@ p {
       left: 185px;
     }
   }
-  
+
+  .scroll-arrow {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 240px;
+    animation: bounce 2s 2;
+    -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+    animation-delay: 2s;
+  }
+
 /* ------------ Slide 2 ------------- */
   .iot-description {
-     position: absolute;
      width: 320px;
-     top: -65px;
-     right: 0;
+     float: right;
   }
 
   .iot-dogs {
-    margin: 5em 0 0 2em;
+   margin-top: 0em;
   }
 
 /* ------------ Slide 3 ------------- */
@@ -713,7 +733,7 @@ p {
 }
 
 /*** iPad ***/
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
   .slide {
     background-attachment: scroll!important;
     padding-top: 13%;
@@ -727,13 +747,10 @@ p {
     height: 150px;
     bottom: -52px;
   }
-
-  .iot-dogs {
-    margin: 10em 0 0 2em;
-  }
 }
 
 /*** Animations ***/
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -768,5 +785,54 @@ p {
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }
 
